@@ -99,5 +99,16 @@ public class TweetAdaptor extends RecyclerView.Adapter<TweetAdaptor.ViewHolder>{
             tvBody=itemView.findViewById(R.id.tvBody);
             tvRelDate=itemView.findViewById(R.id.tvRelDate);
         }
+
+    }
+
+    public void clear(){
+        mTweet.clear();
+        notifyDataSetChanged();
+    }
+
+    public void addAll(List<Tweet> tweets){
+        mTweet.addAll(tweets);
+        notifyDataSetChanged();
     }
 }
